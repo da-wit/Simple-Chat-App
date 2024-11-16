@@ -1,3 +1,4 @@
+import CheckBox from "../../components/checkbox.component.jsx"
 import CustomeInput from "../../components/input.component.jsx"
 
 const Signup = () => {
@@ -15,8 +16,12 @@ const Signup = () => {
       <CustomeInput lableName="Username" name="username"  placeHolder="Enter Username"  type="text"/>
       <CustomeInput lableName="Password" name="password"  placeHolder="Enter Password"  type="text"/>
       <CustomeInput lableName="Confirm Password" name="confirmpassword"  placeHolder="Enter Confirm Password"  type="password"/>
-       <a href="#" className="text-sm hover:underline hover:text-blue-500 m-2 inline-block">Aready have an account</a>
-       <div className="w-full border border-none bg-gray-950 text-center rounded-md m-2">
+      <div className="flex">
+      <CheckBox label="Male"/>
+      <CheckBox label="Female"/>
+      </div>
+       <a href="#" className="text-sm hover:underline hover:text-blue-500 m-2 inline-block">Aready have an account?</a>
+       <div className="border border-none bg-gray-950 rounded-md m-2 flex justify-center items-center cursor-pointer hover:bg-green-500 hover:text-black">
         <button className="text-2xl m-1">Signup</button>
        </div>
              </form>
