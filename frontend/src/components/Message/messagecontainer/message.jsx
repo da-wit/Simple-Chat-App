@@ -6,11 +6,11 @@ import MessageDisplay from "../displaymessages/messageDisplay";
 import { useSelectConversationContext } from "../../../context/SelectConversationContext";
 
 const MessageContainer = () => {
-    const {selected,setSelected} = useSelectConversationContext()
+    const {selected} = useSelectConversationContext()
     const hasConversation = Object.keys(selected).length >0;
     console.log(hasConversation)
     console.log(selected)
-    return <div className="md:min-w-[450px] flex flex-col ml-2">
+    return <div className="md:min-w-[450px] max-h-screen  flex flex-col ml-2">
       
      {hasConversation?<MessageDisplay/>:<MessageEmpty/>}
     </div>
