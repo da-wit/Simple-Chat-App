@@ -60,7 +60,7 @@ function LogIn() {
             {"Don't"} have an account
           </Link>
           <div className="w-full border border-none bg-gray-950 text-center rounded-md m-2">
-            <button className="text-2xl m-1" disabled={loading} // Disable while loading
+            <button className="text-2xl m-1 w-full" disabled={loading} // Disable while loading
             >
               {loading ? (
                 <ClipLoader color="#ffffff" size={20} /> // Show loader while submitting

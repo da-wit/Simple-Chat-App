@@ -2,7 +2,7 @@ import { createContext, useContext, useState } from "react";
 
 export const SelectedMessagesContext = createContext();
 
-export const useSelecctedMessagesContext = () => {
+export const useSelectedMessagesContext = () => {
     return useContext(SelectedMessagesContext)
 }
 

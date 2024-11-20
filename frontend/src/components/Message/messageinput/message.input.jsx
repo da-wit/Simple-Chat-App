@@ -21,8 +21,8 @@ export const Messageinput = () => {
         value={message}
         onChange={(e) => setMessage(e.target.value)}
       />
-      <button className="mx-5 text-3xl hover:text-blue-500"
-      disabled={loading} >
+      <button className={`mx-5 text-3xl ${message? "text-blue-500" : "text-gray-200"}`}
+      disabled={loading || !message} >
               {loading ? (
                 <ClipLoader color="blue" size={20} />
               ) : (

@@ -1,15 +1,17 @@
 import { useEffect, useRef } from "react";
 import { useSelectConversationContext } from "../../../context/SelectConversationContext";
-import { useSelecctedMessagesContext } from "../../../context/SeletedMessagesContext";
+import { useSelectedMessagesContext } from "../../../context/SeletedMessagesContext";
 import { useFetchMessage } from "../../../hooks/useFetchMessages";
 import Receivedmessage from "./received.message";
 import Sentmessage from "./Sent.message";
+import useListenMessages from "../../../hooks/useListenMessages";
 
 const Messages = () => {
   const containerRef = useRef(null)
-  const {selectedMessages,setSelectedMessages} = useSelecctedMessagesContext();
+  const {selectedMessages} = useSelectedMessagesContext();
   const {selected} = useSelectConversationContext()
   const {loading} = useFetchMessage()
+  useListenMessages()
   console.log("messages",selectedMessages)
   const hasMessage = selectedMessages.length > 0;
 

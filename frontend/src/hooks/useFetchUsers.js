@@ -8,6 +8,7 @@ export const useFetchUsers = () => {
 
   useEffect(() => {
     const getUsers = async () => {
+      setLoading(true);
       try {
         const res = await fetch("/api/users", {
           method: "GET",

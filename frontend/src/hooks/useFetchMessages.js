@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import { useSelectConversationContext } from "../context/SelectConversationContext";
 import toast from "react-hot-toast";
-import { useSelecctedMessagesContext } from "../context/SeletedMessagesContext";
+import { useSelectedMessagesContext } from "../context/SeletedMessagesContext";
+import useListenMessages from "./useListenMessages";
 
 export const useFetchMessage = () => {
   const [loading, setLoading] = useState(false);
   const { selected } = useSelectConversationContext();
-  const { setSelectedMessages } = useSelecctedMessagesContext();
+  const { setSelectedMessages } = useSelectedMessagesContext();
+  useListenMessages();
 
   useEffect(() => {
     const fetchMessages = async () => {
